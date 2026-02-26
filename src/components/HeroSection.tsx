@@ -1,0 +1,36 @@
+import heroImage from "@/assets/hero-education.jpg";
+import { Button } from "@/components/ui/button";
+
+const HeroSection = () => {
+  return (
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt="A child studying with parental support in warm sunlight"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/50 to-foreground/30" />
+      </div>
+      <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary-foreground leading-tight mb-6 animate-fade-up">
+          Ensuring Education Never Stops
+        </h1>
+        <p className="text-lg md:text-xl text-primary-foreground/85 mb-10 font-light leading-relaxed animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          We stand beside parents who want their children to study but cannot afford schooling.
+        </p>
+        <div className="animate-fade-up" style={{ animationDelay: "0.4s" }}>
+          <Button
+            size="lg"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-base rounded-full shadow-lg"
+            onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+          >
+            Learn More
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
