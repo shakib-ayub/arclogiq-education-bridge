@@ -30,7 +30,7 @@ const HeroSection = () => {
           <Button
             size="lg"
             variant="outline"
-            className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-6 text-base rounded-full shadow-lg"
+            className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 px-8 py-6 text-base rounded-full shadow-lg"
             onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSe1MthT37VJ0NjR9iYcDioYYJmkTrt8dehrVtSLjBk9yd5_gQ/viewform", "_blank")}
           >
             Contact
