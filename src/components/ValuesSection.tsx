@@ -10,7 +10,7 @@ const values = [
 
 const ValuesSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-background">
+    <section id="values" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-6 max-w-4xl text-center">
         <AnimatedSection>
           <p className="text-sm font-sans uppercase tracking-widest text-muted-foreground mb-4">

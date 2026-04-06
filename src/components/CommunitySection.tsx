@@ -3,7 +3,7 @@ import { Heart } from "lucide-react";
 
 const CommunitySection = () => {
   return (
-    <section className="py-24 md:py-32 bg-sage/40">
+    <section id="community" className="py-24 md:py-32 bg-sage/40">
       <div className="container mx-auto px-6 max-w-3xl text-center">
         <AnimatedSection>
           <div className="w-12 h-12 mx-auto mb-6 rounded-full bg-accent/10 flex items-center justify-center">
