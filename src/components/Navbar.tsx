@@ -41,13 +41,13 @@ const Navbar = () => {
           : "bg-transparent"
       )}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between h-16">
-        <a
-          href="#home"
-          onClick={(e) => handleClick(e, "#home")}
-          className="flex items-center"
-        >
-          <img src={logo} alt="ArclogiqShiksha Logo" width={200} height={200} className="h-16 w-auto" />
+        <div className="container mx-auto px-6 flex items-center justify-between h-24">
+          <a
+            href="#home"
+            onClick={(e) => handleClick(e, "#home")}
+            className="flex items-center"
+          >
+          <img src={logo} alt="ArclogiqShiksha Logo" width={280} height={280} className="h-20 w-auto" />
         </a>
 
         {/* Desktop */}
