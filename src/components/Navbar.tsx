@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -44,12 +45,9 @@ const Navbar = () => {
         <a
           href="#home"
           onClick={(e) => handleClick(e, "#home")}
-          className={cn(
-            "font-serif font-semibold text-xl transition-colors",
-            scrolled ? "text-foreground" : "text-primary-foreground"
-          )}
+          className="flex items-center"
         >
-          EduSupport
+          <img src={logo} alt="EduSupport Logo" width={140} height={140} className="h-10 w-auto" />
         </a>
 
         {/* Desktop */}
