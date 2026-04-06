@@ -8,6 +8,13 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    allowedHosts: [
+      'arclogiqshiksha.org',
+      'www.arclogiqshiksha.org',
+      '.arclogiqshiksha.org',  // Allows all subdomains
+      'localhost',
+      '127.0.0.1',
+    ],
     hmr: {
       overlay: false,
     },
