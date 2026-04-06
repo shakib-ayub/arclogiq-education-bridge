@@ -24,7 +24,7 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-background">
+    <section id="how-it-works" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-6 max-w-4xl">
         <AnimatedSection>
           <div className="text-center mb-16">
