@@ -47,7 +47,7 @@ const Navbar = () => {
           onClick={(e) => handleClick(e, "#home")}
           className="flex items-center"
         >
-          <img src={logo} alt="ArclogiqShiksha Logo" width={140} height={140} className="h-10 w-auto" />
+          <img src={logo} alt="ArclogiqShiksha Logo" width={200} height={200} className="h-16 w-auto" />
         </a>
 
         {/* Desktop */}
