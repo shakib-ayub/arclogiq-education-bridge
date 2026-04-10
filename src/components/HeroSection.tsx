@@ -10,7 +10,7 @@ const HeroSection = () => {
           alt="A child studying with parental support in warm sunlight"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/50 to-foreground/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/65 to-foreground/40" />
       </div>
       <div className="relative z-10 container mx-auto px-6 text-center max-w-3xl">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary-foreground leading-tight mb-6 animate-fade-up">
