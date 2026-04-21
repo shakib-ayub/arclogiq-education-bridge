@@ -41,13 +41,13 @@ const Navbar = () => {
           : "bg-foreground/30 backdrop-blur-sm"
       )}
     >
-        <div className="container mx-auto px-6 flex items-center justify-between h-24">
+        <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between h-24 sm:h-28 md:h-32">
           <a
             href="#home"
             onClick={(e) => handleClick(e, "#home")}
-            className="flex items-center"
+            className="flex items-center shrink-0 py-2"
           >
-          <img src={logo} alt="ArclogiqShiksha Logo" width={280} height={280} className="h-20 w-auto" />
+          <img src={logo} alt="ArclogiqShiksha Logo" width={360} height={360} className="block h-16 sm:h-20 md:h-24 lg:h-28 w-auto max-w-none" />
         </a>
 
         {/* Desktop */}
