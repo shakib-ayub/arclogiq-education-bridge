@@ -49,7 +49,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/65 to-foreground/40" />
       </div>
       <FloatingShapes />
-      <div className="relative z-10 container mx-auto px-6 py-16 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+      <div className="relative z-10 container mx-auto px-6 pt-32 sm:pt-36 md:pt-40 lg:pt-24 pb-16 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
         <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary-foreground leading-tight mb-6 animate-fade-up">
             Ensuring Education Never Stops
