@@ -41,64 +41,67 @@ const Navbar = () => {
           : "bg-foreground/30 backdrop-blur-sm"
       )}
     >
-        <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between h-24 sm:h-28 md:h-32">
+        <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between h-20 sm:h-28 md:h-32">
           <a
             href="#home"
             onClick={(e) => handleClick(e, "#home")}
-            className="flex items-center shrink-0 py-2"
+            className="flex items-center shrink-0 py-1.5 sm:py-2 -ml-1 sm:ml-0"
           >
-          <img src={logo} alt="ArclogiqShiksha Logo" width={360} height={360} className="block h-16 sm:h-20 md:h-24 lg:h-28 w-auto max-w-none" />
-        </a>
+            <img src={logo} alt="ArclogiqShiksha Logo" width={360} height={360} className="block h-14 sm:h-20 md:h-24 lg:h-28 w-auto max-w-none" />
+          </a>
 
-        {/* Desktop */}
-        <ul className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                onClick={(e) => handleClick(e, link.href)}
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
-                  scrolled ? "text-foreground" : "text-primary-foreground"
-                )}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        {/* Mobile toggle */}
-        <button
-          className={cn(
-            "md:hidden p-2 rounded-md transition-colors",
-            scrolled ? "text-foreground" : "text-primary-foreground"
-          )}
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border">
-          <ul className="flex flex-col py-4 px-6 gap-3">
+          {/* Desktop */}
+          <ul className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={(e) => handleClick(e, link.href)}
-                  className="text-sm font-medium text-foreground hover:text-primary transition-colors block py-2"
+                  className={cn(
+                    "text-sm font-medium transition-colors hover:text-primary",
+                    scrolled ? "text-foreground" : "text-primary-foreground"
+                  )}
                 >
                   {link.label}
                 </a>
               </li>
             ))}
           </ul>
+
+          {/* Mobile toggle */}
+          <button
+            className={cn(
+              "md:hidden inline-flex items-center justify-center h-11 w-11 rounded-md transition-colors",
+              scrolled
+                ? "text-foreground hover:bg-foreground/10"
+                : "text-primary-foreground hover:bg-primary-foreground/10"
+            )}
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
         </div>
-      )}
+
+        {/* Mobile menu */}
+        {mobileOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border shadow-lg">
+            <ul className="flex flex-col py-3 px-4 gap-1">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    onClick={(e) => handleClick(e, link.href)}
+                    className="text-base font-medium text-foreground hover:text-primary hover:bg-muted/60 transition-colors block py-3 px-3 rounded-md"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
     </nav>
   );
 };
