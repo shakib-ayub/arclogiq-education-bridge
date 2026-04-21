@@ -2,6 +2,41 @@ import heroImage from "@/assets/hero-education.jpg";
 import classroomImage from "@/assets/kids-smartboard.jpg";
 import { Button } from "@/components/ui/button";
 
+const FloatingShapes = () => {
+  const items = [
+    { type: "letter", char: "A", left: "6%", top: "70%", size: "text-4xl md:text-5xl", anim: "animate-drift-up", delay: "0s", duration: "13s", op: 0.18, rot: "-8deg", rotEnd: "12deg" },
+    { type: "letter", char: "B", left: "18%", top: "85%", size: "text-3xl md:text-4xl", anim: "animate-drift-diagonal", delay: "2s", duration: "15s", op: 0.16, rot: "10deg", rotEnd: "-5deg" },
+    { type: "letter", char: "C", left: "82%", top: "75%", size: "text-5xl md:text-6xl", anim: "animate-drift-up", delay: "4s", duration: "14s", op: 0.14, rot: "5deg", rotEnd: "-10deg" },
+    { type: "letter", char: "1", left: "70%", top: "88%", size: "text-3xl md:text-4xl", anim: "animate-drift-diagonal", delay: "6s", duration: "16s", op: 0.16, rot: "-5deg", rotEnd: "8deg" },
+    { type: "letter", char: "+", left: "40%", top: "82%", size: "text-4xl md:text-5xl", anim: "animate-drift-up", delay: "1s", duration: "12s", op: 0.15, rot: "0deg", rotEnd: "20deg" },
+    { type: "icon", char: "📖", left: "10%", top: "80%", size: "text-3xl md:text-4xl", anim: "animate-drift-up", delay: "3s", duration: "14s", op: 0.35, rot: "-10deg", rotEnd: "10deg" },
+    { type: "icon", char: "✏️", left: "55%", top: "90%", size: "text-3xl md:text-4xl", anim: "animate-drift-diagonal", delay: "5s", duration: "13s", op: 0.4, rot: "15deg", rotEnd: "-15deg" },
+    { type: "icon", char: "📚", left: "88%", top: "82%", size: "text-3xl md:text-4xl", anim: "animate-drift-up", delay: "7s", duration: "15s", op: 0.35, rot: "-5deg", rotEnd: "10deg" },
+    { type: "icon", char: "🎨", left: "30%", top: "88%", size: "text-3xl md:text-4xl", anim: "animate-drift-diagonal", delay: "8s", duration: "16s", op: 0.35, rot: "8deg", rotEnd: "-8deg" },
+  ];
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-[5]" aria-hidden="true">
+      {items.map((it, i) => (
+        <span
+          key={i}
+          className={`absolute font-serif font-bold text-primary-foreground select-none ${it.size} ${it.anim}`}
+          style={{
+            left: it.left,
+            top: it.top,
+            animationDelay: it.delay,
+            animationDuration: it.duration,
+            ["--max-op" as never]: it.op,
+            ["--rot-start" as never]: it.rot,
+            ["--rot-end" as never]: it.rotEnd,
+          }}
+        >
+          {it.char}
+        </span>
+      ))}
+    </div>
+  );
+};
+
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
@@ -13,6 +48,7 @@ const HeroSection = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/65 to-foreground/40" />
       </div>
+      <FloatingShapes />
       <div className="relative z-10 container mx-auto px-6 py-16 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
         <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-primary-foreground leading-tight mb-6 animate-fade-up">
